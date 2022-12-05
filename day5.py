@@ -45,7 +45,6 @@ def two():
                 for i in range(numbers[0]):
                     stacks[numbers[1] - 1].pop()
                 stacks[numbers[2] - 1] += items
-                print(stacks)
     for stack in stacks:
         if len(stack) > 0:
             print(stack[-1], end='')
