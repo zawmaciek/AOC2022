@@ -1,3 +1,6 @@
+import math
+
+
 class Point():
     def __init__(self, x, y):
         self.x = x
@@ -27,12 +30,11 @@ class Point():
 
         dist_x = self.x - point.x
         dist_y = self.y - point.y
-        if abs(dist_x) == 0 and abs(dist_y) < 2 or abs(dist_y) == 0 and abs(dist_x) < 2 or abs(dist_y) == abs(
-                dist_x) == 1:
-            pass
-        else:  # MOOOOVE
+        if abs(dist_x) > 1 or abs(dist_y) > 1:  # MOOOOVE
             self.x -= magn(dist_x)
             self.y -= magn(dist_y)
+        else:
+            pass
 
     def __repr__(self):
         return str(self)
